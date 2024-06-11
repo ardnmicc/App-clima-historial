@@ -15,7 +15,6 @@ function App() {
       );
       const datos = await respuesta.json();
       setClima(datos);
-      // Update historical search list after fetching weather data
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
@@ -30,7 +29,6 @@ function App() {
         },
         body: JSON.stringify({ ciudad: ciudad }),
       });
-      // Fetch recent search history after adding a new city to the historical list
       await fetchHistorialReciente();
     } catch (error) {
       console.error("Error al guardar historial:", error);
